@@ -1,0 +1,10 @@
+defer: 
+    * Usada para limpar recusos do programa
+closure:
+    * uma closure lhe dá acesso ao escopo de uma função externa a partir de uma função interna.
+ponteiros:
+    * Quando vc passa uma variável para uma função, a função faz uma cópia da variável e n a modifica
+      se vc passar o ponteiro vc consegue modificar o valor dessa variável
+init()
+    * função que é executada antes da função main
+    * Cada arquivo pode ter sua função init

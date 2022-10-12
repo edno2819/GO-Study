@@ -1,0 +1,7 @@
+https://gobyexample.com/
+
+go install: transformas os pakages em bibliotecas na pasta bin
+* O GO só exporta funções, variáveis se este começar por letra maiuscula
+
+* Adicione um comentário em cima das funções importadas // Nome da função e descrição
+que vira documentação

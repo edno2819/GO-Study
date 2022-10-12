@@ -1,0 +1,4 @@
+criar autentificação JWt
+fazer algumas rotas
+criar logs
+criar um swagger
