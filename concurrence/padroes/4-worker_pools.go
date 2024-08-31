@@ -2,6 +2,20 @@ package main
 
 import "fmt"
 
+func worker(tarefas <-chan int, resultados chan<- int) {
+	for numero := range tarefas {
+		resultados <- fibonace(numero)
+	}
+}
+
+func fibonace(posicao int) int {
+	if posicao <= 1 {
+		return posicao
+	}
+
+	return fibonace(posicao-2) + fibonace(posicao-1)
+}
+
 func main() {
 	tarefas := make(chan int, 45)
 	resultados := make(chan int, 45)
@@ -22,18 +36,4 @@ func main() {
 		fmt.Println(resultado)
 	}
 
-}
-
-func worker(tarefas <-chan int, resultados chan<- int) {
-	for numero := range tarefas {
-		resultados <- fibonace(numero)
-	}
-}
-
-func fibonace(posicao int) int {
-	if posicao <= 1 {
-		return posicao
-	}
-
-	return fibonace(posicao-2) + fibonace(posicao-1)
 }

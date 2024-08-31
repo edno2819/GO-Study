@@ -35,6 +35,7 @@ func main() {
 		select {
 		case msg1 := <-canal1:
 			fmt.Println(msg1)
+
 		case msg2 := <-canal2:
 			fmt.Println(msg2)
 		}
